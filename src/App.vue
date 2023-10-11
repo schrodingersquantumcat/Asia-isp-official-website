@@ -25,6 +25,6 @@ export default {
 
 <style lang="scss" scoped>
 .head{
-  height: 1px;
+  height: 76px;
 }
 </style>
