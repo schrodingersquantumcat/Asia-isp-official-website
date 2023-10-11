@@ -41,8 +41,8 @@
       <b-navbar-nav class="ml-auto">
 
         <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#"><button @click="toggleLanguageEn">English</button></b-dropdown-item>
-          <b-dropdown-item href="#"><button @click="toggleLanguageZh">简体中文</button></b-dropdown-item>
+          <b-dropdown-item href="#"><button>English</button></b-dropdown-item>
+          <b-dropdown-item href="#"><button>简体中文</button></b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
         </b-nav-item-dropdown>
@@ -76,12 +76,6 @@ export default {
   },
 
   methods: {
-    // toggleLanguageEn(){
-    //   this.$i18n.locale = 'en'
-    // },
-    // toggleLanguageZh(){
-    //   this.$i18n.locale = 'zh'
-    // }
   },
 };
 </script>

@@ -31,10 +31,19 @@
     </b-carousel>
     <!-- 内容 -->
     <b-container class="bv-example-row">
-      <b-row class="bvtext">
-        <b-col>1 of 2</b-col>
-        <b-col>2 of 2</b-col>
-        <b-col>3 of 3</b-col>
+      <b-row class="br-1">
+        <b-col class="bc-1">
+          <b-img class="img-tb" src="../../img/diqiu.png" ></b-img>
+          <span class="sp-1">橙域 融合CDN</span>
+        </b-col>
+        <b-col class="bc-1">
+          <b-img class="img-tb" src="../../img/zhineng.png" ></b-img>
+          <span class="sp-1">橙域 智能调度</span>
+        </b-col>
+        <b-col class="bc-1">
+          <b-img class="img-tb" src="../../img/yuanzhu.png" ></b-img>
+          <span class="sp-1">橙域 数据中心</span>
+        </b-col>
       </b-row>
 
       <b-row class="bvtext">
@@ -136,4 +145,21 @@ export default {
   height: 100%;
   object-fit: cover;
 }
+
+.img-tb{
+  width: 10%;
+}
+.br-1{
+  padding: 2% 0;
+  background-color: #323030;
+}
+.bc-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp-1{
+  margin-left: 5%;
+}
+
 </style>
