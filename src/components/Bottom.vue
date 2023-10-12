@@ -1,14 +1,28 @@
 <template>
   <div>
-    <b-container class="bv-example-row">
+    <b-container class="bv-example-row bottom">
       <!-- 全球加速 -->
       <b-row>
-        <b-col md="12">全球加速</b-col>
+        <b-col>
+          <div class="section">
+            <div class="title">开启属于你的全球加速之旅</div>
+            <a href="http://portal.asia-cdn.com">
+              <div class="btnn">立即体验</div>
+            </a>
+          </div>
+        </b-col>
       </b-row>
       <!-- 微信公众号 -->
       <b-row>
-        <b-col md="6">微信公众号</b-col>
-        <b-col md="6">微信公众号</b-col>
+        <b-col md="8">
+          <h3 class="weixin-title">"橙域CDN" 微信公众号</h3>
+          <div class="weixin-describe">
+            扫描二维码关注“橙域CDN”微信公共号，加入了解相关资讯
+          </div>
+        </b-col>
+        <b-col md="4">
+          <img height="60px" src="../img/weixin.png" alt="" />
+          <img height="120px" src="../img/erwei.jpg" alt="" /></b-col>
       </b-row>
       <!-- 底部导航 -->
       <b-row>
@@ -78,21 +92,21 @@ export default {
   },
 
   mounted () {
-// 监听滚动事件
-window.addEventListener('scroll', this.handleScroll);
+    // 监听滚动事件
+    window.addEventListener('scroll', this.handleScroll);
   },
 
   methods: {
-    handleScroll() {
+    handleScroll () {
       // 当滚动高度大于等于200时，显示回到顶部按钮；否则隐藏
       this.showButton = window.scrollY >= 200;
     },
-    scrollToTop() {
+    scrollToTop () {
       // 将页面滚动到顶部
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   },
-  beforeDestroy() {
+  beforeDestroy () {
     // 移除滚动事件监听
     window.removeEventListener('scroll', this.handleScroll);
   },
@@ -100,6 +114,54 @@ window.addEventListener('scroll', this.handleScroll);
 </script>
 
 <style lang="scss" scoped>
+.container,
+.container-sm,
+.container-md,
+.container-lg {
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .section .title {
+    font-size: 29px;
+  }
+}
+
+.section {
+  width: 100%;
+  padding: 30px 0;
+  background-image: url('../img/bg-black.jpg');
+}
+
+.section a {
+  text-decoration: none;
+  color: #000;
+}
+
+.section .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  /* width: 395px; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section .btnn {
+  border: 1px solid #fff;
+  width: 205px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 3px 67px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.section .btnn:hover {
+  box-shadow: 0 0 6px #fff;
+}
+
 ul {
   list-style-type: none;
 }
@@ -119,8 +181,27 @@ button {
   transition: opacity 0.3s ease;
 }
 
-.top{
+.bottom {
+  width: 100%;
+}
+
+.top {
   width: 100%;
   height: 100%;
+}
+.weixin-title {
+  padding: 24px 0 19px 0;
+  /* text-align: left; */
+  text-decoration: none !important;
+  width: 260px !important;
+  margin: 0px !important;
+  font-size: 24px !important;
+  border-bottom: none !important;
+  text-align: center;
+}
+.weixin-describe {
+  color: #373d41;
+  font-size: 16px;
+  text-align: center;
 }
 </style>

@@ -47,7 +47,9 @@
         </b-col>
       </b-row>
 
-      <b-row class="br-2" style="margin-top: 20px;">
+      <!-- 介绍 -->
+      <div class="js">
+        <b-row class="br-2" style="margin-top: 20px;">
         <b-col sm="6"><img src="../../img/type1.jpg" style="width: 80%;" alt="" /></b-col>
         <b-col sm="6">
           <h1 class="h-sm h-md h-lg">不仅限于融合的智能CDN</h1>
@@ -74,12 +76,14 @@
           </span>
         </b-col>
       </b-row>
+      </div>
+      
       <!-- 解决方案 -->
-      <div>
+      <div class="fa">
         <b-tabs content-class="mt-3" justified>
           <b-tab title="游戏解决方案" active class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">游戏解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -93,7 +97,7 @@
           </b-tab>
           <b-tab title="电商解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img src="../../img/dianshang.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/dianshang.jpg" style="width: 80%;" alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">电商解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -106,7 +110,7 @@
           </b-tab>
           <b-tab title="视频解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img src="../../img/shipin.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/shipin.jpg" style="width: 80%;" alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">视频解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -118,7 +122,7 @@
           </b-tab>
           <b-tab title="金融解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img src="../../img/jinrong.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/jinrong.jpg" style="width: 80%;" alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">金融解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -131,7 +135,7 @@
           </b-tab>
           <b-tab title="AWS迁移方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">AWS迁移方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -146,7 +150,7 @@
         </b-tabs>
       </div>
       <!-- 产品优势 -->
-      <b-container class="bv-example-row">
+      <b-container class="bv-example-row cp">
         <b-row>
           <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
               src="../../img/diannao.png" alt="" />
@@ -183,16 +187,21 @@
         </b-row>
       </b-container>
       <!-- 数据中心 -->
-      <b-row>
-        <b-col md="12">数据中心</b-col>
-      </b-row>
+      <div class="datacenter">
+        <h4>基础数据中心</h4>
+      </div>
+      <Ditu />
     </b-container>
   </div>
 </template>
 
 <script>
+import Ditu from '../../components/Ditu.vue'
 export default {
   name: 'AsiaispIndex',
+  components: {
+    Ditu
+  },
   data () {
     return {
     }
@@ -308,6 +317,15 @@ export default {
   justify-content: center;
   align-items: center;
 }
+.js{
+  margin: 50px 0;
+}
+.fa{
+  margin: 50px 0;
+}
+.cp {
+  margin: 50px 0;
+}
 
 .cp-img {
   flex-grow: 1;
@@ -318,7 +336,9 @@ export default {
 .cp-p {
   flex-grow: 6;
 }
-
+span {
+  margin: 20px;
+}
 .h-pd {
   padding: 0 20px;
 }
@@ -353,6 +373,11 @@ export default {
   }
 }
 
+.datacenter {
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* 在小屏幕上使用小号字体 */
 @media (max-width: 991px) {
   .text-sm {
@@ -373,4 +398,5 @@ export default {
     border-bottom: 1px solid white;
   }
 }
+
 </style>
