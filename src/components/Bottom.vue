@@ -2,7 +2,7 @@
   <div>
     <b-container class="bv-example-row bottom">
       <!-- 全球加速 -->
-      <b-row>
+      <b-row class="js">
         <b-col>
           <div class="section">
             <div class="title">开启属于你的全球加速之旅</div>
@@ -13,22 +13,22 @@
         </b-col>
       </b-row>
       <!-- 微信公众号 -->
-      <b-row>
+      <b-row class="wx">
         <b-col md="8">
           <h3 class="weixin-title">"橙域CDN" 微信公众号</h3>
           <div class="weixin-describe">
             扫描二维码关注“橙域CDN”微信公共号，加入了解相关资讯
           </div>
         </b-col>
-        <b-col md="4">
+        <b-col md="4" class="wximg">
           <img height="60px" src="../img/weixin.png" alt="" />
           <img height="120px" src="../img/erwei.jpg" alt="" /></b-col>
       </b-row>
       <!-- 底部导航 -->
-      <b-row>
+      <div class="dh" style="background-color: #000; color: #fff;padding-top: 20px;"><b-row>
         <b-col sm="2" cols="6">
           <ul>
-            <li>产品</li>
+            <li class="bt">产品</li>
             <li><router-link to="/smartdns">橙域 智能调度</router-link></li>
             <li><router-link to="/dataCenter">橙域 数据中心</router-link></li>
             <li><router-link to="/fusionCDN">橙域 融合CDN</router-link></li>
@@ -38,7 +38,7 @@
         </b-col>
         <b-col sm="2" cols="6">
           <ul>
-            <li>解决方案</li>
+            <li class="bt">解决方案</li>
             <li><router-link to="/gameSolut">游戏解决方案</router-link></li>
             <li><router-link to="/onlineSolut">电商解决方案</router-link></li>
             <li><router-link to="/videoSolut">视频解决方案</router-link></li>
@@ -49,7 +49,7 @@
         </b-col>
         <b-col sm="2" cols="6">
           <ul>
-            <li>联系我们</li>
+            <li class="bt">联系我们</li>
             <li><router-link to="/company">公司介绍</router-link></li>
             <li><router-link to="/joinUs">加入我们</router-link></li>
             <li><router-link to="/business">商务合作</router-link></li>
@@ -57,13 +57,13 @@
         </b-col>
         <b-col sm="2" cols="6">
           <ul>
-            <li>服务支持</li>
+            <li class="bt">服务支持</li>
             <li><router-link to="/technicalSupport">技术支持</router-link></li>
           </ul>
         </b-col>
         <b-col sm="4" cols="6">
           <ul>
-            <li>联系方式</li>
+            <li class="bt">联系方式</li>
             <li>
               <div>
                 <img style="float: left; margin-right: 10px" height="40px" src="../img/phone.png" alt="" />
@@ -75,7 +75,21 @@
             </li>
           </ul>
         </b-col>
-      </b-row>
+      </b-row></div>
+      
+      <!-- 备案 -->
+      <div style="text-align: center; padding: 10px 0;background-color: #000; color: #fff;font-size: 14px;" class="ba">
+          <p>
+            <a
+              style="color:#fff "
+              target="_blank"
+              href="https://beian.miit.gov.cn/"
+              >沪ICP备14011983号</a
+            >
+            《中华人民共和国增值电信业务经营许可证》 编号：沪B1-20172237号
+          </p>
+          <p>©2014-2020 Asia-isp. All Rights Reserved.</p>
+        </div>
     </b-container>
     <button v-show="showButton" @click="scrollToTop"><img class="top" src="../img/top.png" alt=""></button>
   </div>
@@ -203,5 +217,23 @@ button {
   color: #373d41;
   font-size: 16px;
   text-align: center;
+}
+.wximg {
+  text-align: center;
+}
+.js,
+.wx,
+.dh{
+margin-top: 20px;
+}
+.da{
+  background-color: #000; 
+}
+a{
+  color: #fff;
+}
+.bt{
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 </style>

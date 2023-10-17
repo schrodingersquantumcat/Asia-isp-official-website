@@ -198,8 +198,8 @@ export default {
 
   data () {
     return {
-      isWorldMapShown: false,
-      isCountryMapShown: true,
+      isWorldMapShown: true,
+      isCountryMapShown: false,
       isLineMapShown: false
     };
   },

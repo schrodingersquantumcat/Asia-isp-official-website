@@ -5,7 +5,7 @@
       img-height="480">
       <b-carousel-slide>
         <template #img>
-          <div class="image-container lunbo1">
+          <div class="image-container">
             <img class="d-block img-fluid w-100" width="1024" height="480" src="../../img/lunbo1.jpg" alt="image slot">
             <div class="overlay-box"></div>
             <div class="image-text">
@@ -50,40 +50,41 @@
       <!-- 介绍 -->
       <div class="js">
         <b-row class="br-2" style="margin-top: 20px;">
-        <b-col sm="6"><img src="../../img/type1.jpg" style="width: 80%;" alt="" /></b-col>
-        <b-col sm="6">
-          <h1 class="h-sm h-md h-lg">不仅限于融合的智能CDN</h1>
-          <span class="text-sm text-md text-lg">
-            自研的智能调度算法和APM探测平台数据的结合，提前检测预警并自动切换优质的线路，为客户品质服务保驾护航
-          </span>
-        </b-col>
-      </b-row>
-      <b-row class="br-2">
-        <b-col sm="6"><img src="../../img/type2.jpg" style="width: 80%;" alt=""></b-col>
-        <b-col sm="6">
-          <h1 class="h-sm h-md h-lg">定制专属客服的定制服务</h1>
-          <span class="text-sm text-md text-lg">
-            根据每个客户的使用场景和个性化需求，寻找合适的一站式服务解决方案，简化流程、提高效率，为客户带来安全、信赖、极速的体验
-          </span>
-        </b-col>
-      </b-row>
-      <b-row class="br-2">
-        <b-col sm="6"><img src="../../img/type3.jpg" style="width: 80%;" alt=""></b-col>
-        <b-col sm="6">
-          <h1 class="h-sm h-md h-lg">每周7*24小时保障服务、快速响应客户需求</h1>
-          <span class="text-sm text-md text-lg">
-            保障每个客户的服务品质，确保第一时间响应并反馈，在极短的时间内处理解决故障，实时监控每个客户的健康状态
-          </span>
-        </b-col>
-      </b-row>
+          <b-col sm="6"><img src="../../img/type1.jpg" style="width: 80%;" alt="" /></b-col>
+          <b-col sm="6">
+            <h1 class="h-sm h-md h-lg">不仅限于融合的智能CDN</h1>
+            <span class="text-sm text-md text-lg">
+              自研的智能调度算法和APM探测平台数据的结合，提前检测预警并自动切换优质的线路，为客户品质服务保驾护航
+            </span>
+          </b-col>
+        </b-row>
+        <b-row class="br-2">
+          <b-col sm="6"><img src="../../img/type2.jpg" style="width: 80%;" alt=""></b-col>
+          <b-col sm="6">
+            <h1 class="h-sm h-md h-lg">定制专属客服的定制服务</h1>
+            <span class="text-sm text-md text-lg">
+              根据每个客户的使用场景和个性化需求，寻找合适的一站式服务解决方案，简化流程、提高效率，为客户带来安全、信赖、极速的体验
+            </span>
+          </b-col>
+        </b-row>
+        <b-row class="br-2">
+          <b-col sm="6"><img src="../../img/type3.jpg" style="width: 80%;" alt=""></b-col>
+          <b-col sm="6">
+            <h1 class="h-sm h-md h-lg">每周7*24小时保障服务、快速响应客户需求</h1>
+            <span class="text-sm text-md text-lg">
+              保障每个客户的服务品质，确保第一时间响应并反馈，在极短的时间内处理解决故障，实时监控每个客户的健康状态
+            </span>
+          </b-col>
+        </b-row>
       </div>
-      
+
       <!-- 解决方案 -->
       <div class="fa">
         <b-tabs content-class="mt-3" justified>
           <b-tab title="游戏解决方案" active class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;"
+                  alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">游戏解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -97,7 +98,8 @@
           </b-tab>
           <b-tab title="电商解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/dianshang.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/dianshang.jpg" style="width: 80%;"
+                  alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">电商解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -110,7 +112,8 @@
           </b-tab>
           <b-tab title="视频解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/shipin.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/shipin.jpg" style="width: 80%;"
+                  alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">视频解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -122,7 +125,8 @@
           </b-tab>
           <b-tab title="金融解决方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/jinrong.jpg" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/jinrong.jpg" style="width: 80%;"
+                  alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">金融解决方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -135,7 +139,8 @@
           </b-tab>
           <b-tab title="AWS迁移方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;" alt="" /></b-col>
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;"
+                  alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">AWS迁移方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
@@ -152,36 +157,44 @@
       <!-- 产品优势 -->
       <b-container class="bv-example-row cp">
         <b-row>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/diannao.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/diannao.png"
+                alt="" /></div>
             <p class="cp-p">优胜劣汰，只和值得的厂商合作</p>
           </b-col>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/zhilupai.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px;"
+              src="../../img/zhilupai.png" alt="" /></div>
             <p class="cp-p">精细化的链路控制、智能的调度、实时的分析</p>
           </b-col>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/shezhi.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/shezhi.png"
+                alt="" /></div>
             <p class="cp-p">私人订制，使用与客户的服务架构</p>
           </b-col>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/suo.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/suo.png"
+                alt="" /></div>
             <p class="cp-p">可用性>=99.99%、耐久性》=99.99999999999%</p>
           </b-col>
-          <b-col sm="6" class="flexbox"> <img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/jiagou.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/jiagou.png"
+                alt="" /></div>
             <p class="cp-p"> 覆盖至中小运营商，力争最后一公里</p>
           </b-col>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/bianji.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/bianji.png"
+                alt="" /></div>
             <p class="cp-p">便捷自助服务后台，支持Restul API</p>
           </b-col>
-          <b-col sm="6" class="flexbox"><img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/zhengfangti.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/zhengfangti.png"
+                alt="" /></div>
             <p class="cp-p">实时网络探测、提前预知风险、全局可控</p>
           </b-col>
-          <b-col sm="6" class="flexbox"> <img class="cp-img" height="45px" style="margin-right: 18px"
-              src="../../img/renqun.png" alt="" />
+          <b-col sm="6" class="flexbox">
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px" src="../../img/renqun.png"
+                alt="" /></div>
             <p class="cp-p">全球7*24小时不间断专业技术支持保障</p>
           </b-col>
         </b-row>
@@ -274,7 +287,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 0.5%;
   border-right: 1px solid white;
 }
 
@@ -316,13 +329,17 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
-.js{
+
+.js {
   margin: 50px 0;
 }
-.fa{
+
+.fa {
   margin: 50px 0;
 }
+
 .cp {
   margin: 50px 0;
 }
@@ -336,9 +353,11 @@ export default {
 .cp-p {
   flex-grow: 6;
 }
+
 span {
   margin: 20px;
 }
+
 .h-pd {
   padding: 0 20px;
 }
@@ -356,6 +375,9 @@ span {
   .h-lg {
     font-size: 26px;
   }
+  .flexbox {
+    padding: 0 100px;
+  }
 }
 
 /* 在中等屏幕上使用中号字体 */
@@ -370,6 +392,9 @@ span {
 
   .h-md {
     font-size: 22px;
+  }
+  .flexbox {
+    padding: 0 50px;
   }
 }
 
@@ -398,5 +423,4 @@ span {
     border-bottom: 1px solid white;
   }
 }
-
 </style>
