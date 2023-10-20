@@ -6,13 +6,13 @@
         <router-link to="/nodeDistr">查看更多节点</router-link>
       </div>
       <div class="buttonGroup">
-        <button style="outline: none" class="btn btn-default" id="worldBtn" @click="showWorldMap">
+        <button style="outline: none" class="btn btn-default" id="worldBtn" @click="showWorldMap" :class="{'active': activeButton === 'worldBtn'}">
           全球
         </button>
-        <button style="outline: none" class="btn btn-default" id="countryBtn" @click="showCountryMap">
+        <button style="outline: none" class="btn btn-default" id="countryBtn" @click="showCountryMap" :class="{'active': activeButton === 'countryBtn'}">
           国内
         </button>
-        <button style="outline: none" class="btn btn-default" id="lineBtn" @click="showLineMap">
+        <button style="outline: none" class="btn btn-default" id="lineBtn" @click="showLineMap" :class="{'active': activeButton === 'lineBtn'}">
           专线
         </button>
       </div>
@@ -200,7 +200,8 @@ export default {
     return {
       isWorldMapShown: true,
       isCountryMapShown: false,
-      isLineMapShown: false
+      isLineMapShown: false,
+      activeButton: 'worldBtn'
     };
   },
 
@@ -213,24 +214,28 @@ export default {
       this.isWorldMapShown = true;
       this.isCountryMapShown = false;
       this.isLineMapShown = false;
+      this.activeButton = 'worldBtn';
     },
     showCountryMap: function () {
       this.isWorldMapShown = false;
       this.isCountryMapShown = true;
       this.isLineMapShown = false;
-      console.log(this.isWorldMapShown,this.isCountryMapShown,this.isLineMapShown);
+      this.activeButton = 'countryBtn';
     },
     showLineMap: function () {
       this.isWorldMapShown = false;
       this.isCountryMapShown = false;
       this.isLineMapShown = true;
-      console.log(this.isWorldMapShown,this.isCountryMapShown,this.isLineMapShown);
+      this.activeButton = 'lineBtn';
     }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.active  {
+  background-color: #e6e6e6;
+}
 @media (max-width: 480px) {
   .section-6 .buttonGroup {
     position: absolute;

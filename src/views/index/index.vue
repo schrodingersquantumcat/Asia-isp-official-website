@@ -39,16 +39,19 @@
         </b-col>
         <b-col sm="4" class="bc-1">
           <b-img class="img-tb" src="../../img/zhineng.png"></b-img>
-          <span class="sp-1">橙域 智能调度</span>
+          <span class="sp-1">橙域 AWS云计算</span>
         </b-col>
         <b-col sm="4" class="bc-1 bc-13">
           <b-img class="img-tb" src="../../img/yuanzhu.png"></b-img>
-          <span class="sp-1">橙域 数据中心</span>
+          <span class="sp-1">橙域 跨境专线</span>
         </b-col>
       </b-row>
 
+      <!-- 资格证书 -->
+      
+
       <!-- 介绍 -->
-      <div class="js">
+      <!-- <div class="js">
         <b-row class="br-2" style="margin-top: 20px;">
           <b-col sm="6"><img src="../../img/type1.jpg" style="width: 80%;" alt="" /></b-col>
           <b-col sm="6">
@@ -76,7 +79,7 @@
             </span>
           </b-col>
         </b-row>
-      </div>
+      </div> -->
 
       <!-- 解决方案 -->
       <div class="fa">
@@ -217,9 +220,22 @@ export default {
   },
   data () {
     return {
+     
+      images: [
+        '../../img/data1.jpg',
+        '../../img/data2.jpg',
+        '../../img/data3.jpg',
+        '../../img/data4.jpg',
+        '../../img/data5.jpg',
+        '../../img/data6.jpg',
+        // 更多图片...
+      ],
+      currentPage: 0
     }
   },
   methods: {
+  },
+  mounted() {
   }
 }
 </script>
@@ -253,11 +269,11 @@ export default {
   text-align: center;
 }
 
-.br-2 {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
+// .br-2 {
+//   text-align: center;
+//   margin-top: 10px;
+//   margin-bottom: 40px;
+// }
 
 .image-container {
   width: 100%;
@@ -332,9 +348,9 @@ export default {
   margin-top: 20px;
 }
 
-.js {
-  margin: 50px 0;
-}
+// .js {
+//   margin: 50px 0;
+// }
 
 .fa {
   margin: 50px 0;
