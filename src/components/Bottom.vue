@@ -25,7 +25,7 @@
           <img height="120px" src="../img/erwei.jpg" alt="" /></b-col>
       </b-row>
       <!-- 底部导航 -->
-      <div class="dh" style="background-color: #000; color: #fff;padding-top: 20px;"><b-row>
+      <div class="dh" style="background-color: #0f4682; color: #fff;padding-top: 20px;"><b-row>
         <b-col sm="2" cols="6">
           <ul>
             <li class="bt">产品</li>
@@ -78,7 +78,7 @@
       </b-row></div>
       
       <!-- 备案 -->
-      <div style="text-align: center; padding: 10px 0;background-color: #000; color: #fff;font-size: 14px;" class="ba">
+      <div style="text-align: center; padding: 10px 0;background-color: #0f4682; color: #fff;font-size: 14px;" class="ba">
           <p>
             <a
               style="color:#fff "
@@ -144,7 +144,8 @@ export default {
 .section {
   width: 100%;
   padding: 30px 0;
-  background-image: url('../img/bg-black.jpg');
+  // background-image: url('../img/bg-black.jpg');
+  background-color: #0f4682;
 }
 
 .section a {

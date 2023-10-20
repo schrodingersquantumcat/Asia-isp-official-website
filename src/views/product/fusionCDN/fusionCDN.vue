@@ -1,6 +1,6 @@
 <template>
   <div>
-    AsiaispFusionCDN
+   
   </div>
 </template>
 

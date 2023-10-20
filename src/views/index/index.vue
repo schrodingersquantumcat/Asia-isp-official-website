@@ -35,11 +35,11 @@
       <b-row class="br-1">
         <b-col sm="4" class="bc-1">
           <b-img class="img-tb" src="../../img/diqiu.png"></b-img>
-          <span class="sp-1">橙域 融合CDN</span>
+          <span class="sp-1"><router-link to="/fusionCDN">橙域 融合CDN</router-link></span>
         </b-col>
         <b-col sm="4" class="bc-1">
           <b-img class="img-tb" src="../../img/zhineng.png"></b-img>
-          <span class="sp-1">橙域 AWS云计算</span>
+          <span class="sp-1"><router-link to="/AWS">橙域 AWS云计算</router-link></span>
         </b-col>
         <b-col sm="4" class="bc-1 bc-13">
           <b-img class="img-tb" src="../../img/yuanzhu.png"></b-img>
@@ -48,7 +48,27 @@
       </b-row>
 
       <!-- 资格证书 -->
-      
+      <b-container class="bv-example-row">
+        <b-row class="text-center">
+          <b-col> <div class="box">
+        <ul>
+          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+        </ul>
+      </div></b-col>
+        </b-row>
+      </b-container>
+     
 
       <!-- 介绍 -->
       <!-- <div class="js">
@@ -166,8 +186,8 @@
             <p class="cp-p">优胜劣汰，只和值得的厂商合作</p>
           </b-col>
           <b-col sm="6" class="flexbox">
-            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px;"
-              src="../../img/zhilupai.png" alt="" /></div>
+            <div><img class="cp-img" height="45px" width="45px" style="margin-right: 18px;" src="../../img/zhilupai.png"
+                alt="" /></div>
             <p class="cp-p">精细化的链路控制、智能的调度、实时的分析</p>
           </b-col>
           <b-col sm="6" class="flexbox">
@@ -220,27 +240,59 @@ export default {
   },
   data () {
     return {
-     
-      images: [
-        '../../img/data1.jpg',
-        '../../img/data2.jpg',
-        '../../img/data3.jpg',
-        '../../img/data4.jpg',
-        '../../img/data5.jpg',
-        '../../img/data6.jpg',
-        // 更多图片...
-      ],
-      currentPage: 0
     }
   },
   methods: {
   },
-  mounted() {
+  mounted () {
   }
 }
 </script>
 
 <style lang="scss" scoped>
+// 走马灯
+.box {
+  /* 重点：盒子宽度 600 */
+  margin: 20px 100px;
+  // border: 3px solid black;
+  overflow: hidden;
+}
+
+.box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  height: 100%;
+  animation: move 5s linear infinite;
+}
+
+/* hover 暂停，不用可去掉 */
+.box ul:hover {
+  animation-play-state: paused;
+}
+
+.box ul li {
+  height: 100%;
+  /* 重点：单个图片宽度 200，相当于默认不动可见 3 个 */
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.box ul li img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes move {
+
+  /* 为什么设置 -800px ？公式：主图张数 * 单个图片宽度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样） */
+  100% {
+    transform: translateX(-800px);
+  }
+}
+
+// 轮播图
 .lunbo {
   height: 400px;
 }
@@ -391,6 +443,7 @@ span {
   .h-lg {
     font-size: 26px;
   }
+
   .flexbox {
     padding: 0 100px;
   }
@@ -409,6 +462,7 @@ span {
   .h-md {
     font-size: 22px;
   }
+
   .flexbox {
     padding: 0 50px;
   }
@@ -438,5 +492,4 @@ span {
   .bc-1 {
     border-bottom: 1px solid white;
   }
-}
-</style>
+}</style>
