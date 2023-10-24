@@ -17,10 +17,10 @@
       </b-row>
       <b-row>
         <b-col sm="6" class="bc-1">
-          <div class="col-xs-2 col-sm-1 col-md-1">
-            <img src="../../../img/game1.png" width="30px" alt="" />
+          <div>
+            <img class="img-icon" src="../../../img/game1.png" width="30px" alt="" />
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10">
+          <div>
             <div class="title">频更新</div>
             <div class="conten">
               <p>对的分发要求高</p>
@@ -29,10 +29,10 @@
           </div>
         </b-col>
         <b-col sm="6" class="bc-1">
-          <div class="col-xs-2 col-sm-1 col-md-1">
-            <img src="../../../img/game2.png" width="30px" alt="" />
+          <div>
+            <img class="img-icon" src="../../../img/game2.png" width="30px" alt="" />
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10">
+          <div>
             <div class="title">高突发</div>
             <div class="conten">
               <p>突发会达到惊人程度</p>
@@ -43,10 +43,10 @@
       </b-row>
       <b-row>
         <b-col sm="6" class="bc-1">
-          <div class="col-xs-2 col-sm-1 col-md-1">
-            <img src="../../../img/game3.png" width="30px" alt="" />
+          <div>
+            <img class="img-icon" src="../../../img/game3.png" width="30px" alt="" />
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10">
+          <div>
             <div class="title">可视化</div>
             <div class="conten">
               <p>运营需要及时发现问题</p>
@@ -55,10 +55,10 @@
           </div>
         </b-col>
         <b-col sm="6" class="bc-1">
-          <div class="col-xs-2 col-sm-1 col-md-1">
-            <img src="../../../img/game4.png" width="30px" alt="" />
+          <div>
+            <img class="img-icon" src="../../../img/game4.png" width="30px" alt="" />
           </div>
-          <div class="col-xs-10 col-sm-10 col-md-10">
+          <div>
             <div class="title">转化率</div>
             <div class="conten">
               <p>逐步分析转化数据，清楚问题所在</p>
@@ -81,17 +81,17 @@
             <div>支持数据分析，快速排除故障，助力运营商开拓业务</div>
           </div>
         </b-col>
-        <b-col sm="6" class="bc-2"><img src="../../../img/game66.png" style="margin: -31px 0 31px 0px" width="70%"
+        <b-col sm="6" class="bc-2"><img class="img-jg" src="../../../img/game66.png" style="margin: 31px 0 31px 0px" 
             alt="" /></b-col>
       </b-row>
 
     </b-container>
     <b-container class="bv-example-row">
       <b-row>
-        <b-col sm="6" class="bc-3"><b-img src="../../../img/gamecase-1.png" fluid alt="Responsive image"
-            style="margin: 10px;"></b-img></b-col>
-        <b-col sm="6" class="bc-3"><b-img src="../../../img/gamecase-2.png" fluid alt="Responsive image"
-            style="margin: 10px;"></b-img></b-col>
+        <b-col sm="6" class="bc-3"><b-img class="img-lz" src="../../../img/gamecase-1.png" fluid
+            alt="Responsive image"></b-img></b-col>
+        <b-col sm="6" class="bc-3"><b-img class="img-lz img-lz2" src="../../../img/gamecase-2.png" fluid
+            alt="Responsive image"></b-img></b-col>
       </b-row>
     </b-container>
   </div>
@@ -142,6 +142,10 @@ export default {
   padding: 60px;
 }
 
+.img-icon {
+  margin-right: 10px;
+}
+
 .bc-1 {
   display: flex;
   padding: 10px;
@@ -155,10 +159,13 @@ export default {
   color: #0099ff;
 }
 
-.bc-3{
+.bc-3 {
   text-align: center;
 }
 
+.img-jg{
+  width: 80%;
+}
 /* 在大屏幕上使用大号字体 */
 @media (min-width: 1200px) {
   .image-overlay h3 {
@@ -172,6 +179,12 @@ export default {
     font-size: 24px;
     margin-right: 600px;
   }
+}
+
+.img-lz {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 /* 在中等屏幕上使用中号字体 */
@@ -217,5 +230,13 @@ export default {
     font-size: 18px;
     margin-right: 50px;
   }
+
+  .img-lz2 {
+    margin-top: 30px;
+  }
+  
+.img-jg{
+  width: 100%;
+}
 }
 </style>

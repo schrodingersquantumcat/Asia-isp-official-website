@@ -97,7 +97,7 @@ export default {
   methods: {
     handleScroll () {
       this.scrolled = window.scrollY >= 70;
-      console.log(this.scrolled);
+      // console.log(this.scrolled);
     },
     beforeDestroy () {
     // 移除滚动事件监听

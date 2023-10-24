@@ -50,25 +50,26 @@
       <!-- 资格证书 -->
       <b-container class="bv-example-row">
         <b-row class="text-center">
-          <b-col> <div class="box">
-        <ul>
-          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-          <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-        </ul>
-      </div></b-col>
+          <b-col>
+            <div class="box">
+              <ul>
+                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
+                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
+              </ul>
+            </div>
+          </b-col>
         </b-row>
       </b-container>
-     
 
       <!-- 介绍 -->
       <!-- <div class="js">
@@ -240,21 +241,21 @@ export default {
   },
   data () {
     return {
+
     }
   },
   methods: {
   },
   mounted () {
-  }
+  },
+
 }
 </script>
 
 <style lang="scss" scoped>
 // 走马灯
 .box {
-  /* 重点：盒子宽度 600 */
   margin: 20px 100px;
-  // border: 3px solid black;
   overflow: hidden;
 }
 
@@ -492,4 +493,5 @@ span {
   .bc-1 {
     border-bottom: 1px solid white;
   }
-}</style>
+}
+</style>
