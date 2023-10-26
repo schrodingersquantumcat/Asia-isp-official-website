@@ -2,7 +2,7 @@
   <div>
     <b-container class="bv-example-row bottom">
       <!-- 全球加速 -->
-      <b-row class="js">
+      <!-- <b-row class="js">
         <b-col>
           <div class="section">
             <div class="title">开启属于你的全球加速之旅</div>
@@ -11,7 +11,7 @@
             </a>
           </div>
         </b-col>
-      </b-row>
+      </b-row> -->
       <!-- 微信公众号 -->
       <b-row class="wx">
         <b-col md="8">
@@ -78,7 +78,7 @@
       </b-row></div>
       
       <!-- 备案 -->
-      <div style="text-align: center; padding: 10px 0;background-color: #0f4682; color: #fff;font-size: 14px;" class="ba">
+      <div style="text-align: center; padding: 10px 0;background-color: #0f4682; color: #fff;font-size: 14px;">
           <p>
             <a
               style="color:#fff "
@@ -133,6 +133,7 @@ export default {
 .container-md,
 .container-lg {
   max-width: 100%;
+  padding: 0;
 }
 
 @media (max-width: 480px) {

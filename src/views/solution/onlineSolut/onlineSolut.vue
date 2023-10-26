@@ -128,7 +128,7 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   padding-top: 100px;
 }
 

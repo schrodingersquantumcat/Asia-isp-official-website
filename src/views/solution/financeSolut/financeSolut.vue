@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/game.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
+    <b-img src="../../../img/finance.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
     <div class="image-overlay">
       <h3>金融解决方案</h3>
       <p>安全、放心加速体验</p>
@@ -86,7 +86,7 @@
             <div>支持数据分析，快速排除故障，助力运营商开拓业务</div>
           </div>
         </b-col>
-        <b-col sm="6" class="bc-2"><img class="img-jg" src="../../../img/finance66.png" style="margin: 31px 0 31px 0px" 
+        <b-col sm="6" class="bc-2"><img class="img-jg" src="../../../img/finance66.png" style="margin: 31px 0 31px 0px"
             alt="" /></b-col>
       </b-row>
 
@@ -134,7 +134,7 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   padding-top: 100px;
 }
 
@@ -178,9 +178,11 @@ export default {
   width: 100%;
   height: 100%;
 }
-.img-jg{
+
+.img-jg {
   width: 80%;
 }
+
 /* 在大屏幕上使用大号字体 */
 @media (min-width: 1200px) {
   .image-overlay h3 {
@@ -243,9 +245,14 @@ export default {
   .img-lz2 {
     margin-top: 30px;
   }
-  .img-jg{
-  width: 100%;
-}
+
+  .img-jg {
+    width: 100%;
+  }
+
+  .image-overlay {
+    top: -60px;
+  }
 }
 </style>
 
