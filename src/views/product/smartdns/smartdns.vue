@@ -150,7 +150,7 @@ export default {
 .container-md,
 .container-lg {
   max-width: 100%;
-  padding: 0px;
+  padding: 30px;
 }
 
 .title-h3 {
