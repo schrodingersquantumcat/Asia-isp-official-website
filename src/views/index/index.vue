@@ -48,28 +48,11 @@
       </b-row>
 
       <!-- 资格证书 -->
-      <b-container class="bv-example-row">
-        <b-row class="text-center">
-          <b-col>
-            <div class="box">
-              <ul>
-                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_1.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_2.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_3.png" alt=""></a></li>
-                <li><a href="#"><img src="../../img/content_4.png" alt=""></a></li>
-              </ul>
-            </div>
-          </b-col>
-        </b-row>
-      </b-container>
+      <div class="swiper-list-card swiper-list">
+        <div class="swiper-main-card swiper-main"></div>
+        <img id="prev-card" class="btn leftBtn" src="../left.png" alt="">
+        <img id="next-card" class="btn rightBtn" src="../right.png" alt="">
+      </div>
 
       <!-- 介绍 -->
       <!-- <div class="js">
@@ -233,6 +216,53 @@
 </template>
 
 <script>
+import './slider_card.js'
+let imgArr = [{
+  url: '#',
+  imgPath: '../i.jpg'
+},
+{
+  url: '#',
+  imgPath: '../o.jpg'
+},
+{
+  url: '#',
+  imgPath: '../q.jpeg'
+},
+{
+  url: '#',
+  imgPath: '../w.jpg'
+},
+{
+  url: '#',
+  imgPath: '../z.png'
+}
+];
+// let imgArr = ['i.jpg', 'o.jpg', 'q.jpeg'];
+// let imgArr = ['i.jpg', 'o.jpg'];
+// let imgArr = ['i.jpg'];
+new Swiper({
+  imgArr: imgArr,
+  imgWidth: 320,
+  aniTime: 1000,
+  intervalTime: 1500,
+  scale: 0.8,
+  autoplay: false,
+  gap: 0,
+  clsSuffix: '-card'
+}).init();
+
+
+new Swiper({
+  imgArr: imgArr,
+  imgWidth: 320,
+  aniTime: 1000,
+  intervalTime: 1500,
+  scale: 0.8,
+  autoplay: false,
+  gap: -200,
+  clsSuffix: '-stack'
+}).init();
 import Ditu from '../../components/Ditu.vue'
 export default {
   name: 'AsiaispIndex',
@@ -253,45 +283,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// 走马灯
-.box {
-  margin: 20px 100px;
+// 资质轮播
+.swiper-list {
+  height: 200px;
+  position: relative;
   overflow: hidden;
+  border: 1px solid #eee;
+  padding: 30px 0;
 }
 
-.box ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
+.swiper-main {
   height: 100%;
-  animation: move 5s linear infinite;
+  position: relative;
 }
 
-/* hover 暂停，不用可去掉 */
-.box ul:hover {
-  animation-play-state: paused;
-}
-
-.box ul li {
+.swiper-main img {
   height: 100%;
-  /* 重点：单个图片宽度 200，相当于默认不动可见 3 个 */
-  width: 200px;
-  flex-shrink: 0;
+  display: block;
+  position: absolute;
+  top: 0px;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.box ul li img {
-  height: 100%;
-  width: 100%;
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  z-index: 1002;
 }
 
-@keyframes move {
-
-  /* 为什么设置 -800px ？公式：主图张数 * 单个图片宽度（每轮主图只有 4 张，4 张照片为一个周期，如果需要轮播的主图为 7、8、9...张，都一样） */
-  100% {
-    transform: translateX(-800px);
-  }
+.leftBtn {
+  left: 0px;
 }
+
+.rightBtn {
+  right: 0px;
+}
+
 
 // 轮播图
 .lunbo {
