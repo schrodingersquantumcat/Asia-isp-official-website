@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/datacenter.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
+    <b-img src="../../../img/datacenter.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
     <div class="image-overlay">
       <h3>全球Tier3+数据中心服务</h3>
       <p>全国覆盖 国际标准 骨干网络 丰富链路</p>
@@ -88,12 +88,12 @@
         <b-col class="title">数据中心</b-col>
       </b-row>
       <b-row>
-        <b-col col="12" class="bc-4">
+        <b-col class="bc-4">
           <p>服务器托管服务中，用户需要购买配置好的服务器再邮寄或者搬运到机房，过程中相对耗时。</p>
         </b-col>
       </b-row>
       <b-row>
-        <b-col col="12" class="bc-4"><img src="../../../img/data12.jpg" width="70%" style="margin-top: 40px" alt="" /></b-col>
+        <b-col class="bc-4"><img src="../../../img/data12.jpg" width="70%" style="margin-top: 20px;" alt="" /></b-col>
       </b-row>
     </b-container>
   </div>
@@ -203,9 +203,6 @@ export default {
     margin-right: 300px;
   }
 
-  .content {
-    font-size: 18px;
-  }
 }
 
 
@@ -222,10 +219,6 @@ export default {
     font-size: 22px;
     margin-right: 100px;
   }
-
-  .content {
-    font-size: 18px;
-  }
 }
 
 
@@ -241,14 +234,6 @@ export default {
     color: white;
     font-size: 20px;
     margin-right: 0px;
-  }
-
-  .content {
-    font-size: 16px;
-  }
-
-  .img-jiaguo {
-    width: 80%;
   }
 }
 
@@ -269,25 +254,5 @@ export default {
     height: 250px;
   }
 
-  .img-jg {
-    width: 100%;
-  }
-
-  .content {
-    font-size: 14px;
-  }
-
-  .bc-2 {
-    margin: 10px 0;
-  }
-
-  .img-jiaguo {
-    width: 100%;
-  }
-
-  .content-blue {
-    padding: 20px;
-    margin: 10px 0;
-  }
 }
 </style>
