@@ -50,8 +50,8 @@
       <!-- 资格证书 -->
       <div class="swiper-list-card swiper-list">
         <div class="swiper-main-card swiper-main"></div>
-        <img id="prev-card" class="btn leftBtn" src="../left.png" alt="">
-        <img id="next-card" class="btn rightBtn" src="../right.png" alt="">
+        <!-- <img id="prev-card" class="btn leftBtn" src="../left.png" alt=""> -->
+        <!-- <img id="next-card" class="btn rightBtn" src="../right.png" alt=""> -->
       </div>
 
       <!-- 介绍 -->
@@ -216,7 +216,7 @@
 </template>
 
 <script>
-import './slider_card.js'
+import { Swiper } from './slider_card'
 let imgArr = [{
   url: '#',
   imgPath: '../i.jpg'
@@ -269,14 +269,14 @@ export default {
   components: {
     Ditu
   },
-  data () {
+  data() {
     return {
 
     }
   },
   methods: {
   },
-  mounted () {
+  mounted() {
   },
 
 }
