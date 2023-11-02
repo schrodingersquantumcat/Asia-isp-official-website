@@ -118,4 +118,12 @@ export default {
 
 .change-color {
   background-color: rgba(46, 48, 50, 0.8);
-}</style>
+}
+// .container,
+// .container-sm,
+// .container-md,
+// .container-lg {
+//   max-width: 100%;
+//   // padding: 0;
+// }
+</style>
