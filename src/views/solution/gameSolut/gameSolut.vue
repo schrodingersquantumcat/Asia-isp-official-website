@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/game.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
+    <b-img src="../../../img/game.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;;min-height: 200px;"></b-img>
     <div class="image-overlay">
       <h3>游戏解决方案</h3>
       <p>提升出海加速体验</p>

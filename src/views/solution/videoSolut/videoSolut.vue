@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/video.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
+    <b-img src="../../../img/video.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;;min-height: 200px;"></b-img>
     <div class="image-overlay">
       <h3>视频解决方案</h3>
       <p>丰富、乐趣加速体验</p>

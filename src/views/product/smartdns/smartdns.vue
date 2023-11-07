@@ -1,16 +1,17 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/smartdns.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;"></b-img>
+    <b-img src="../../../img/smartdns.jpg" fluid alt="Responsive image"
+      style="width: 100%; max-height: 350px;;min-height: 200px;"></b-img>
     <div class="image-overlay">
       <h3>智能DNS</h3>
       <p>动态实时更新的IP数据库、资源动态调配系统、实时监控系统、快速切换系统组成</p>
     </div>
     <!-- 内容 -->
-    <b-container class="bv-example-row">
+    <b-container class="bv-example-row" style="background-color: #0f4682; color: #fff;">
       <b-row>
         <b-col>
-          <h3 class="title-h3">核心价值</h3>
+          <h3 class="title">核心价值</h3>
         </b-col>
       </b-row>
 
@@ -43,7 +44,7 @@
 
       <b-row>
         <b-col>
-          <h3 class="title-h3">服务功能</h3>
+          <h3 class="title">服务功能</h3>
         </b-col>
       </b-row>
 
@@ -53,7 +54,7 @@
             <img src="../../../img/dns9.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title">智能调度</div>
+            <div class="title-2">智能调度</div>
             <div class="content">
               基于实时更新的IP数据库，可以将各地的访问请求自动分配到距离用户就近的CDN节点
             </div>
@@ -64,7 +65,7 @@
             <img src="../../../img/dns10.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title">智能统计</div>
+            <div class="title-2">智能统计</div>
             <div class="content">
               基于实时探测自有APM节点探测、第三方监测点、真实用户访问数据计算，可以访问请求自动分配性能优质的CDN节点
             </div>
@@ -75,7 +76,7 @@
             <img src="../../../img/dns11.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title">智能排障</div>
+            <div class="title-2">智能排障</div>
             <div class="content">
               基于实时设备节点监控、网路链路监控，可以迅速感知故障节点并下线替换，避免请求用户服务到异常CDN节点
             </div>
@@ -86,7 +87,7 @@
             <img src="../../../img/dns12.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title">智能预知</div>
+            <div class="title-2">智能预知</div>
             <div class="content">
               基于实时大数据的用户访问情况，通过量化分析，预测潜在风险并发送报警
             </div>
@@ -96,7 +97,7 @@
 
       <b-row>
         <b-col>
-          <h3 class="title-h3">产品架构</h3>
+          <h3 class="title">产品架构</h3>
         </b-col>
       </b-row>
 
@@ -153,17 +154,21 @@ export default {
   padding: 30px;
 }
 
-.title-h3 {
-  text-align: center;
-  margin-top: 40px;
+.title {
+  font-size: 24px;
   color: #0099ff;
+  text-align: center;
+  margin: 30px;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .content-blue {
   background-color: #0f4682;
   color: #fff;
-  padding: 40px;
-  margin: 20px 0;
+  padding: 0 40px;
+  margin: 20px 0 0 0;
 }
 
 .bc-1 {
@@ -181,7 +186,7 @@ export default {
   margin: 20px 0;
 }
 
-.bc-2 .title {
+.bc-2 .title-2 {
   color: #0099ff;
 }
 
@@ -288,8 +293,9 @@ export default {
   .img-jiaguo {
     width: 100%;
   }
+
   .content-blue {
-  padding: 20px;
-  margin: 10px 0;
-}
+    padding: 20px;
+    margin: 10px 0;
+  }
 }</style>
