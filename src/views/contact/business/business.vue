@@ -4,7 +4,7 @@
     <b-img src="../../../img/business.png" fluid alt="Responsive image"
       style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
 
-    <b-container class="bv-example-row" style="background-color: #0f4682; color: #fff;">
+    <b-container class="bv-example-row container-style">
       <b-row>
         <b-col class="title">客户指南</b-col>
       </b-row>
@@ -142,23 +142,9 @@ export default {
 
 <style lang="scss" scoped>
 // 内容
-.container,
-.container-sm,
-.container-md,
-.container-lg {
-  max-width: 100%;
-  padding: 30px;
-}
 
-.title {
-  font-size: 24px;
-  color: #0099ff;
-  text-align: center;
-  margin: 30px;
-  margin-top: 60px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
-}
+
+
 
 .bc-1 {
   padding: 20px;
@@ -172,13 +158,7 @@ export default {
   text-align: center;
 }
 
-.title-2 {
-  font-size: 18px;
-  text-align: center;
-  margin: 30px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
-}
+
 
 .bc-2 {
   padding: 20px;

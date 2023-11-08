@@ -4,16 +4,15 @@
     <b-img src="../../img/technical.jpg" fluid alt="Responsive image"
       style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
 
-    <b-container class="bv-example-row" style="background-color: #0f4682; color: #fff;">
+    <b-container class="bv-example-row container-style">
       <b-row>
         <b-col class="title">
-          <h1>专业定制支持</h1>
-          <div class="sub-title">售前咨询/售后咨询</div>
+          <h>专业定制支持</h>
         </b-col>
       </b-row>
       <b-row>
         <b-col md="6">
-          <div class="title">售前业务咨询</div>
+          <div class="title-2">售前业务咨询</div>
           <div>
             售前咨询团队将竭诚为您提供云产品咨询，方案解决及其他售前服务
           </div>
@@ -24,7 +23,7 @@
           </div>
         </b-col>
         <b-col md="6">
-          <div class="title">售后业务咨询</div>
+          <div class="title-2">售后业务咨询</div>
           <div>
             专业技术支持团队将7*24待命，全年无休，充分保障您的产品的无优使用和业务的稳定运行。
           </div>
@@ -43,7 +42,7 @@
       </b-row>
       <b-row>
         <b-col class="title">
-          <h1>服务权限</h1>
+          <h>服务权限</h>
         </b-col>
       </b-row>
       <b-row>
@@ -167,13 +166,7 @@ export default {
 
 <style lang="scss" scoped>
 // 内容
-.container,
-.container-sm,
-.container-md,
-.container-lg {
-  max-width: 100%;
-  padding: 30px;
-}
+
 
 .title {
   font-size: 24px;

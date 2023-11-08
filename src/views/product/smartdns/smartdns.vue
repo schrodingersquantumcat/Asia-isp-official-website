@@ -4,14 +4,14 @@
     <b-img src="../../../img/smartdns.jpg" fluid alt="Responsive image"
       style="width: 100%; max-height: 350px;;min-height: 200px;"></b-img>
     <div class="image-overlay">
-      <h3>智能DNS</h3>
+      <h>智能DNS</h>
       <p>动态实时更新的IP数据库、资源动态调配系统、实时监控系统、快速切换系统组成</p>
     </div>
     <!-- 内容 -->
-    <b-container class="bv-example-row" style="background-color: #0f4682; color: #fff;">
+    <b-container class="bv-example-row container-style">
       <b-row>
-        <b-col>
-          <h3 class="title">核心价值</h3>
+        <b-col class="title">
+          <h>核心价值</h>
         </b-col>
       </b-row>
 
@@ -43,8 +43,8 @@
       </b-row>
 
       <b-row>
-        <b-col>
-          <h3 class="title">服务功能</h3>
+        <b-col  class="title">
+          <h>服务功能</h>
         </b-col>
       </b-row>
 
@@ -54,7 +54,7 @@
             <img src="../../../img/dns9.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title-2">智能调度</div>
+            <div class="title-3">智能调度</div>
             <div class="content">
               基于实时更新的IP数据库，可以将各地的访问请求自动分配到距离用户就近的CDN节点
             </div>
@@ -65,7 +65,7 @@
             <img src="../../../img/dns10.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title-2">智能统计</div>
+            <div class="title-3">智能统计</div>
             <div class="content">
               基于实时探测自有APM节点探测、第三方监测点、真实用户访问数据计算，可以访问请求自动分配性能优质的CDN节点
             </div>
@@ -76,7 +76,7 @@
             <img src="../../../img/dns11.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title-2">智能排障</div>
+            <div class="title-3">智能排障</div>
             <div class="content">
               基于实时设备节点监控、网路链路监控，可以迅速感知故障节点并下线替换，避免请求用户服务到异常CDN节点
             </div>
@@ -87,7 +87,7 @@
             <img src="../../../img/dns12.png" width="45px" alt="" />
           </div>
           <div class="">
-            <div class="title-2">智能预知</div>
+            <div class="title-3">智能预知</div>
             <div class="content">
               基于实时大数据的用户访问情况，通过量化分析，预测潜在风险并发送报警
             </div>
@@ -96,8 +96,8 @@
       </b-row>
 
       <b-row>
-        <b-col>
-          <h3 class="title">产品架构</h3>
+        <b-col class="title">
+          <h>产品架构</h>
         </b-col>
       </b-row>
 
@@ -130,39 +130,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// first大图
-.image-overlay {
-  position: absolute;
-  top: 76px;
-  left: 0;
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  padding-top: 100px;
-}
-
-// 内容
-.container,
-.container-sm,
-.container-md,
-.container-lg {
-  max-width: 100%;
-  padding: 30px;
-}
-
-.title {
-  font-size: 24px;
-  color: #0099ff;
-  text-align: center;
-  margin: 30px;
-  margin-top: 60px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
-}
 
 .content-blue {
   background-color: #0f4682;
@@ -186,9 +153,6 @@ export default {
   margin: 20px 0;
 }
 
-.bc-2 .title-2 {
-  color: #0099ff;
-}
 
 .jiagou {
   text-align: center;
@@ -198,40 +162,10 @@ export default {
   width: 57%;
 }
 
-/* 在大屏幕上使用大号字体 */
-@media (min-width: 1200px) {
-  h3 {
-    color: white;
-    font-size: 36px;
-  }
-
-  .image-overlay p {
-    margin-top: 120px;
-    color: white;
-    font-size: 24px;
-    margin-right: 300px;
-  }
-
-  .content {
-    font-size: 18px;
-  }
-}
 
 
 /* 在中等屏幕上使用中号字体 */
 @media (min-width: 992px) and (max-width: 1199px) {
-  h3 {
-    color: white;
-    font-size: 32px;
-  }
-
-  .image-overlay p {
-    margin-top: 100px;
-    color: white;
-    font-size: 22px;
-    margin-right: 100px;
-  }
-
   .content {
     font-size: 18px;
   }
@@ -240,43 +174,13 @@ export default {
 
 /* 在小屏幕上使用小号字体 */
 @media (max-width: 991px) {
-  h3 {
-    color: white;
-    font-size: 28px;
-  }
-
-  .image-overlay p {
-    margin-top: 100px;
-    color: white;
-    font-size: 20px;
-    margin-right: 0px;
-  }
-
-  .content {
-    font-size: 16px;
-  }
-
-  .img-jiaguo {
+   .img-jiaguo {
     width: 80%;
   }
 }
 
 @media (max-width: 576px) {
-  h3 {
-    color: white;
-    font-size: 26px;
-  }
 
-  .image-overlay p {
-    color: white;
-    font-size: 18px;
-    margin-top: 100px;
-  }
-
-  .image-overlay {
-    padding-top: 10px;
-    height: 250px;
-  }
 
   .img-jg {
     width: 100%;
@@ -298,4 +202,5 @@ export default {
     padding: 20px;
     margin: 10px 0;
   }
-}</style>
+}
+</style>

@@ -1,14 +1,15 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/datacenter.jpg" fluid alt="Responsive image" style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
+    <b-img src="../../../img/datacenter.jpg" fluid alt="Responsive image"
+      style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
     <div class="image-overlay">
-      <h3>全球Tier3+数据中心服务</h3>
+      <h>全球Tier3+数据中心服务</h>
       <p>全国覆盖 国际标准 骨干网络 丰富链路</p>
     </div>
 
     <!-- 内容 -->
-    <b-container class="bv-example-row" style="background-color: #0f4682;">
+    <b-container class="bv-example-row container-style">
 
       <b-row>
         <b-col class="title">云数据中心</b-col>
@@ -120,29 +121,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// first大图
-.image-overlay {
-  position: absolute;
-  top: 76px;
-  left: 0;
-  width: 100%;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  padding-top: 100px;
-}
+
 
 // 内容
-.container,
-.container-sm,
-.container-md,
-.container-lg {
-  max-width: 100%;
-  padding: 30px;
-}
 
 .title {
   font-size: 24px;
@@ -184,75 +165,11 @@ export default {
   font-size: 20px;
   margin-top: 10px;
 }
-.bc-4{
+
+.bc-4 {
   font-size: 18px;
   color: #fff;
   text-align: center;
 }
-/* 在大屏幕上使用大号字体 */
-@media (min-width: 1200px) {
-  h3 {
-    color: white;
-    font-size: 36px;
-  }
 
-  .image-overlay p {
-    margin-top: 120px;
-    color: white;
-    font-size: 24px;
-    margin-right: 300px;
-  }
-
-}
-
-
-/* 在中等屏幕上使用中号字体 */
-@media (min-width: 992px) and (max-width: 1199px) {
-  h3 {
-    color: white;
-    font-size: 32px;
-  }
-
-  .image-overlay p {
-    margin-top: 100px;
-    color: white;
-    font-size: 22px;
-    margin-right: 100px;
-  }
-}
-
-
-/* 在小屏幕上使用小号字体 */
-@media (max-width: 991px) {
-  h3 {
-    color: white;
-    font-size: 28px;
-  }
-
-  .image-overlay p {
-    margin-top: 100px;
-    color: white;
-    font-size: 20px;
-    margin-right: 0px;
-  }
-}
-
-@media (max-width: 576px) {
-  h3 {
-    color: white;
-    font-size: 26px;
-  }
-
-  .image-overlay p {
-    color: white;
-    font-size: 18px;
-    margin-top: 100px;
-  }
-
-  .image-overlay {
-    padding-top: 10px;
-    height: 250px;
-  }
-
-}
 </style>
