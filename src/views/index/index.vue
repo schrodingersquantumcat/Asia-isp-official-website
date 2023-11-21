@@ -148,15 +148,13 @@
           </b-tab>
           <b-tab title="AWS迁移方案" class="sl-tb">
             <b-row class="br-3">
-              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/solve1.png" style="width: 80%;"
+              <b-col sm="4" class="bc-3"><img class="fa-img" src="../../img/aws-ques.jpg" style="width: 80%;"
                   alt="" /></b-col>
               <b-col sm="8" class="bc-3">
                 <h1 class="h-sm h-md h-lg h-pd">AWS迁移方案</h1>
                 <span class="textsl-sm textsl-md textsl-lg">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为游戏行业提供一系列解决方案，涵盖开发、运维、运营等领域和场景。
-                  针对不同类型的游戏提供灵活而稳定的部署方案，助您轻松应对玩家激增、高并发、海量访问等带来的问题；
-                  为游戏的各种应用场景提供游戏生态服务解决方案，如游戏场景的开发组件、游戏安全、游戏加速、全球互联互通等，
-                  让您的游戏更稳定、更安全、更好玩。
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amazon Web Services 提供专门构建的服务、可立即部署的软件包以及带有指导信息的可定制架构，以快速解决业务挑战。解决方案由 AWS 和 AWS 合作伙伴构建，旨在解决特定行业、跨行业和技术用例。
+                  Benefits：专为满足您的需求而设计；由专家建造和维护；精心策划以加快发现速度；加速实现价值。
                 </span>
               </b-col>
             </b-row>
@@ -229,297 +227,297 @@ export default {
     }
   },
   methods: {
-    swiperInit () {
+    // swiperInit () {
 
-      /**
-      * obj: 
-      * imgArr 图片数组
-      * imgWidth 图片宽度
-      * aniTime 动画切换时间
-      * intervalTime 停留的时间
-      * scale 图片缩放
-      * autoplay 是否自动播放
-      * gap 图片之间间隔
-      */
-      function Swiper (obj) {
-        this.imgArr = obj.imgArr || [];
-        this.scale = obj.scale || 0.8; // 图片缩放值
-        this.gap = obj.gap; // 图片未缩放状态下图片之间的间隔
+    //   /**
+    //   * obj: 
+    //   * imgArr 图片数组
+    //   * imgWidth 图片宽度
+    //   * aniTime 动画切换时间
+    //   * intervalTime 停留的时间
+    //   * scale 图片缩放
+    //   * autoplay 是否自动播放
+    //   * gap 图片之间间隔
+    //   */
+    //   function Swiper (obj) {
+    //     this.imgArr = obj.imgArr || [];
+    //     this.scale = obj.scale || 0.8; // 图片缩放值
+    //     this.gap = obj.gap; // 图片未缩放状态下图片之间的间隔
 
-        // 移动端
-        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-          this.containerWidth = window.innerWidth - 20; // 轮播图盒子宽度
-        } else {
-          // PC端
-          this.containerWidth = 1200; // 轮播图盒子宽度
-        }
-        this.imgWidth = obj.imgWidth; // 图片宽度
-        this.aniTime = obj.aniTime || 500;
-        this.intervalTime = this.aniTime + obj.intervalTime || 2000;
-        this.nowIndex = 3;
-        this.imgDoms = document.getElementsByClassName('swiper-slide' + obj.clsSuffix);
-        this.mainDom = document.getElementsByClassName('swiper-main' + obj.clsSuffix)[0];
-        this.listDoms = document.getElementsByClassName('swiper-list' + obj.clsSuffix)[0];
-        this.activeDom = this.imgDoms[0];
-        this.autoplay = obj.autoplay;
+    //     // 移动端
+    //     if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    //       this.containerWidth = window.innerWidth - 20; // 轮播图盒子宽度
+    //     } else {
+    //       // PC端
+    //       this.containerWidth = 1200; // 轮播图盒子宽度
+    //     }
+    //     this.imgWidth = obj.imgWidth; // 图片宽度
+    //     this.aniTime = obj.aniTime || 500;
+    //     this.intervalTime = this.aniTime + obj.intervalTime || 2000;
+    //     this.nowIndex = 3;
+    //     this.imgDoms = document.getElementsByClassName('swiper-slide' + obj.clsSuffix);
+    //     this.mainDom = document.getElementsByClassName('swiper-main' + obj.clsSuffix)[0];
+    //     this.listDoms = document.getElementsByClassName('swiper-list' + obj.clsSuffix)[0];
+    //     this.activeDom = this.imgDoms[0];
+    //     this.autoplay = obj.autoplay;
 
-        this.listDoms.style.width = `${this.containerWidth}px`;
+    //     this.listDoms.style.width = `${this.containerWidth}px`;
 
-        this.timer; // 自动播放的定时器
-        this.prev = Date.now();
+    //     this.timer; // 自动播放的定时器
+    //     this.prev = Date.now();
 
-        this.diffLen = (this.containerWidth - this.imgWidth - (this.gap * 2)) / 2;
-        this.clsSuffix = obj.clsSuffix
-      }
+    //     this.diffLen = (this.containerWidth - this.imgWidth - (this.gap * 2)) / 2;
+    //     this.clsSuffix = obj.clsSuffix
+    //   }
 
-      Swiper.prototype = {
-        init: function () {
-          this.eventBind();
+    //   Swiper.prototype = {
+    //     init: function () {
+    //       this.eventBind();
 
-          let resImgArr;
-          if (this.imgArr.length > 2) {
-            resImgArr = [this.imgArr[this.imgArr.length - 2], this.imgArr[this.imgArr.length - 1], ...this.imgArr, this.imgArr[0], this.imgArr[1]];
-            this.mainDom.style.left = `${-(2 * this.imgWidth + this.gap - this.diffLen)}px`;
-            this.mainDom.style.width = `${(this.imgArr.length + 2) * (this.imgWidth + (this.gap / 2))}px`;
-          } else {
-            this.nowIndex = 0;
-            resImgArr = [...this.imgArr];
-          }
-          let str = '';
-          resImgArr.forEach((item, index) => {
-            str += `<a href="${resImgArr[index].url}"><img class="swiper-slide${this.clsSuffix}" style="width: ${this.imgWidth}px;" src="${resImgArr[index].imgPath}" /></a>`;
-          });
-          this.mainDom.innerHTML = str;
-          this.setScale();
-          if (this.autoplay) {
-            this.timer = setInterval(this.nextSlider.bind(this, this.aniTime), this.intervalTime);
-          }
-        },
-        setScale: function () {
-          // 堆叠式
-          if (this.gap < 0) {
+    //       let resImgArr;
+    //       if (this.imgArr.length > 2) {
+    //         resImgArr = [this.imgArr[this.imgArr.length - 2], this.imgArr[this.imgArr.length - 1], ...this.imgArr, this.imgArr[0], this.imgArr[1]];
+    //         this.mainDom.style.left = `${-(2 * this.imgWidth + this.gap - this.diffLen)}px`;
+    //         this.mainDom.style.width = `${(this.imgArr.length + 2) * (this.imgWidth + (this.gap / 2))}px`;
+    //       } else {
+    //         this.nowIndex = 0;
+    //         resImgArr = [...this.imgArr];
+    //       }
+    //       let str = '';
+    //       resImgArr.forEach((item, index) => {
+    //         str += `<a href="${resImgArr[index].url}"><img class="swiper-slide${this.clsSuffix}" style="width: ${this.imgWidth}px;" src="${resImgArr[index].imgPath}" /></a>`;
+    //       });
+    //       this.mainDom.innerHTML = str;
+    //       this.setScale();
+    //       if (this.autoplay) {
+    //         this.timer = setInterval(this.nextSlider.bind(this, this.aniTime), this.intervalTime);
+    //       }
+    //     },
+    //     setScale: function () {
+    //       // 堆叠式
+    //       if (this.gap < 0) {
 
-            for (let i = 0; i < this.imgDoms.length; i++) {
-              if (this.imgArr.length === 2) {
-                this.imgDoms[0].style.left = `${(this.containerWidth / 4) - (this.imgWidth / 2)}px`;
-                this.imgDoms[1].style.left = `${(this.containerWidth / 4) * 3 - (this.imgWidth / 2)}px`;
-              } else if (this.imgArr.length === 1) {
-                this.imgDoms[i].style.left = `${(this.containerWidth / 2) - (this.imgWidth / 2)}px`;
-              } else {
-                this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}px`;
-              }
-
-
-              if (i === this.nowIndex) {
-                this.imgDoms[i].style.transform = 'scale(1)';
-                this.imgDoms[i].style.zIndex = '1001';
-              } else if (i < this.nowIndex) {
-                this.imgDoms[i].style.transform = `scale(${1 - ((this.nowIndex - i) * 0.2)})`;
-                this.imgDoms[i].style.zIndex = 1000 - ((this.nowIndex - i));
-              } else if (i > this.nowIndex) {
-                this.imgDoms[i].style.transform = `scale(${1 - ((i - this.nowIndex) * 0.2)})`;
-                this.imgDoms[i].style.zIndex = 1000 - (i - this.nowIndex);
-              }
-            }
-          } else {
-            // 卡片式
-            for (let i = 0; i < this.imgDoms.length; i++) {
-              if (this.imgArr.length === 2) {
-                this.imgDoms[0].style.left = `${(this.containerWidth / 4) - (this.imgWidth / 2)}px`;
-                this.imgDoms[1].style.left = `${(this.containerWidth / 4) * 3 - (this.imgWidth / 2)}px`;
-              } else if (this.imgArr.length === 1) {
-                this.imgDoms[i].style.left = `${(this.containerWidth / 2) - (this.imgWidth / 2)}px`;
-              } else {
-                this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}px`;
-              }
-              if (i === this.nowIndex) {
-                this.imgDoms[i].style.transform = 'scale(1)';
-              } else {
-                this.imgDoms[i].style.transform = `scale(${this.scale})`;
-              }
-            }
-          }
-        },
-        prevSlider: function (aniTime) {
-          if (this.imgArr.length === 2) {
-            this.nowIndex = this.nowIndex ? 0 : 1;
-            this.setScale()
-          } else if (this.imgArr.length === 1) {
-            return;
-          } else {
-            this.nowIndex--;
-            this.mainDom.style.transition = `left ${aniTime / 1000}s`
-            this.mainDom.style.left = `${parseInt(this.mainDom.style.left) + (this.gap + this.imgWidth)}px`;
-            if (this.nowIndex === 1) {
-              this.setScale()
-              setTimeout(function () {
-                this.nowIndex = (this.imgArr.length + 1);
-                this.setScale()
-                this.mainDom.style.transitionProperty = 'none';
-                this.mainDom.style.left = `${-(parseInt(this.imgDoms[this.nowIndex].style.left) - this.diffLen - this.gap)}px`;
-              }.bind(this), aniTime)
-            } else {
-              this.setScale()
-            }
-          }
-        },
-        nextSlider: function (aniTime) {
-          if (this.imgArr.length === 2) {
-            this.nowIndex = this.nowIndex ? 0 : 1;
-            this.setScale()
-          } else if (this.imgArr.length === 1) {
-            return;
-          } else {
-            if (this.nowIndex >= 2) {
-              this.mainDom.style.transition = `left ${aniTime / 1000}s`
-              this.mainDom.style.left = `${parseInt(this.mainDom.style.left) - (this.gap + this.imgWidth)}px`;
-              // this.mainDom.style.left = `${this.gap + this.imgWidth}px`;
-            }
-            if (this.nowIndex === (this.imgArr.length + 1)) {
-              this.nowIndex = (this.imgArr.length + 2);
-              this.setScale()
-              setTimeout(function () {
-                this.nowIndex = 2;
-                this.setScale()
-                this.mainDom.style.transitionProperty = 'none';
-                this.mainDom.style.left = `${-(this.imgWidth - this.diffLen)}px`;
-              }.bind(this), aniTime)
-            } else {
-              this.nowIndex++;
-              this.setScale()
-            }
-          }
-        },
-        eventBind: function () {
-          let that = this;
-
-          document.getElementById('next' + this.clsSuffix).onmouseover = function () {
-            clearInterval(that.timer);
-          }
-          document.getElementById('next' + this.clsSuffix).onmouseout = function () {
-            that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
-          }
-          document.getElementById('next' + this.clsSuffix).onclick = function () {
-            that.throttle(that.nextSlider, 300, 300);
-          }
+    //         for (let i = 0; i < this.imgDoms.length; i++) {
+    //           if (this.imgArr.length === 2) {
+    //             this.imgDoms[0].style.left = `${(this.containerWidth / 4) - (this.imgWidth / 2)}px`;
+    //             this.imgDoms[1].style.left = `${(this.containerWidth / 4) * 3 - (this.imgWidth / 2)}px`;
+    //           } else if (this.imgArr.length === 1) {
+    //             this.imgDoms[i].style.left = `${(this.containerWidth / 2) - (this.imgWidth / 2)}px`;
+    //           } else {
+    //             this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}px`;
+    //           }
 
 
-          document.getElementById('prev' + this.clsSuffix).onmouseover = function () {
-            clearInterval(that.timer);
-          }
-          document.getElementById('prev' + this.clsSuffix).onmouseout = function () {
-            that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
-          }
-          document.getElementById('prev' + this.clsSuffix).onclick = function () {
-            that.throttle(that.prevSlider, 300, 300);
-          }
+    //           if (i === this.nowIndex) {
+    //             this.imgDoms[i].style.transform = 'scale(1)';
+    //             this.imgDoms[i].style.zIndex = '1001';
+    //           } else if (i < this.nowIndex) {
+    //             this.imgDoms[i].style.transform = `scale(${1 - ((this.nowIndex - i) * 0.2)})`;
+    //             this.imgDoms[i].style.zIndex = 1000 - ((this.nowIndex - i));
+    //           } else if (i > this.nowIndex) {
+    //             this.imgDoms[i].style.transform = `scale(${1 - ((i - this.nowIndex) * 0.2)})`;
+    //             this.imgDoms[i].style.zIndex = 1000 - (i - this.nowIndex);
+    //           }
+    //         }
+    //       } else {
+    //         // 卡片式
+    //         for (let i = 0; i < this.imgDoms.length; i++) {
+    //           if (this.imgArr.length === 2) {
+    //             this.imgDoms[0].style.left = `${(this.containerWidth / 4) - (this.imgWidth / 2)}px`;
+    //             this.imgDoms[1].style.left = `${(this.containerWidth / 4) * 3 - (this.imgWidth / 2)}px`;
+    //           } else if (this.imgArr.length === 1) {
+    //             this.imgDoms[i].style.left = `${(this.containerWidth / 2) - (this.imgWidth / 2)}px`;
+    //           } else {
+    //             this.imgDoms[i].style.left = `${(i - 1) * (this.imgWidth + this.gap)}px`;
+    //           }
+    //           if (i === this.nowIndex) {
+    //             this.imgDoms[i].style.transform = 'scale(1)';
+    //           } else {
+    //             this.imgDoms[i].style.transform = `scale(${this.scale})`;
+    //           }
+    //         }
+    //       }
+    //     },
+    //     prevSlider: function (aniTime) {
+    //       if (this.imgArr.length === 2) {
+    //         this.nowIndex = this.nowIndex ? 0 : 1;
+    //         this.setScale()
+    //       } else if (this.imgArr.length === 1) {
+    //         return;
+    //       } else {
+    //         this.nowIndex--;
+    //         this.mainDom.style.transition = `left ${aniTime / 1000}s`
+    //         this.mainDom.style.left = `${parseInt(this.mainDom.style.left) + (this.gap + this.imgWidth)}px`;
+    //         if (this.nowIndex === 1) {
+    //           this.setScale()
+    //           setTimeout(function () {
+    //             this.nowIndex = (this.imgArr.length + 1);
+    //             this.setScale()
+    //             this.mainDom.style.transitionProperty = 'none';
+    //             this.mainDom.style.left = `${-(parseInt(this.imgDoms[this.nowIndex].style.left) - this.diffLen - this.gap)}px`;
+    //           }.bind(this), aniTime)
+    //         } else {
+    //           this.setScale()
+    //         }
+    //       }
+    //     },
+    //     nextSlider: function (aniTime) {
+    //       if (this.imgArr.length === 2) {
+    //         this.nowIndex = this.nowIndex ? 0 : 1;
+    //         this.setScale()
+    //       } else if (this.imgArr.length === 1) {
+    //         return;
+    //       } else {
+    //         if (this.nowIndex >= 2) {
+    //           this.mainDom.style.transition = `left ${aniTime / 1000}s`
+    //           this.mainDom.style.left = `${parseInt(this.mainDom.style.left) - (this.gap + this.imgWidth)}px`;
+    //           // this.mainDom.style.left = `${this.gap + this.imgWidth}px`;
+    //         }
+    //         if (this.nowIndex === (this.imgArr.length + 1)) {
+    //           this.nowIndex = (this.imgArr.length + 2);
+    //           this.setScale()
+    //           setTimeout(function () {
+    //             this.nowIndex = 2;
+    //             this.setScale()
+    //             this.mainDom.style.transitionProperty = 'none';
+    //             this.mainDom.style.left = `${-(this.imgWidth - this.diffLen)}px`;
+    //           }.bind(this), aniTime)
+    //         } else {
+    //           this.nowIndex++;
+    //           this.setScale()
+    //         }
+    //       }
+    //     },
+    //     eventBind: function () {
+    //       let that = this;
 
-          this.mainDom.addEventListener('touchstart', function (e) {
-            clearInterval(that.timer);
-            that.startX = e.changedTouches[0].clientX;
-            that.startY = e.changedTouches[0].clientY;
-          })
-          this.mainDom.addEventListener('touchmove', function (e) {
-            clearInterval(that.timer);
-            that.endX = e.changedTouches[0].clientX;
-            that.endY = e.changedTouches[0].clientY;
-          })
-          this.mainDom.addEventListener('touchend', function () {
-            if (!that.mainDom.style.transition) {
-              that.mainDom.style.transition = `left ${that.aniTime / 1000}s`
-            }
-            let angle = that.angle({ X: that.startX, Y: that.startY }, { X: that.endX, Y: that.endY });
-            if (Math.abs(angle) > 30) return;
-            if (that.endX > that.startX) { // 右滑
-              that.prevSlider(that.aniTime);
-            } else { // 左滑
-              that.nextSlider(that.aniTime);
-            }
-            that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
-
-          })
-        },
-        // 节流：时间戳版
-        throttle (handle, delay, val) {
-          var now = Date.now();
-          if (now - this.prev >= delay) {
-            handle.call(this, val);
-            this.prev = Date.now();
-          }
-        },
-        /**
-        * 计算滑动角度
-        * @param {Object} start 起点坐标
-        * @param {Object} end 终点坐标
-        */
-        angle: function (start, end) {
-          var _X = end.X - start.X,
-            _Y = end.Y - start.Y
-          //返回角度 /Math.atan()返回数字的反正切值
-          return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
-        }
-      }
-
-      let imgArr = [{
-        url: '#',
-        imgPath: ''  },
-      {
-        url: '#',
-        imgPath: ''  },
-      {
-        url: '#',
-        imgPath: '' },
-      {
-        url: '#',
-        imgPath: '' },
-      {
-        url: '#',
-        imgPath: ''  },
-      {
-        url: '#',
-        imgPath:'' },
-      {
-        url: '#',
-        imgPath: ''   },
-      {
-        url: '#',
-        imgPath: '' },
-      {
-        url: '#',
-        imgPath: ''  },
-      {
-        url: '#',
-        imgPath: '' }
-      ];
-      // let imgArr = ['i.jpg', 'o.jpg', 'q.jpeg'];
-      // let imgArr = ['i.jpg', 'o.jpg'];
-      // let imgArr = ['i.jpg'];
-      new Swiper({
-        imgArr: imgArr,
-        imgWidth: 320,
-        aniTime: 1000,
-        intervalTime: 1500,
-        scale: 0.8,
-        autoplay: false,
-        gap: 0,
-        clsSuffix: '-card'
-      }).init();
+    //       document.getElementById('next' + this.clsSuffix).onmouseover = function () {
+    //         clearInterval(that.timer);
+    //       }
+    //       document.getElementById('next' + this.clsSuffix).onmouseout = function () {
+    //         that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
+    //       }
+    //       document.getElementById('next' + this.clsSuffix).onclick = function () {
+    //         that.throttle(that.nextSlider, 300, 300);
+    //       }
 
 
-      new Swiper({
-        imgArr: imgArr,
-        imgWidth: 320,
-        aniTime: 1000,
-        intervalTime: 1500,
-        scale: 0.8,
-        autoplay: false,
-        gap: -200,
-        clsSuffix: '-stack'
-      }).init();
-    }
+    //       document.getElementById('prev' + this.clsSuffix).onmouseover = function () {
+    //         clearInterval(that.timer);
+    //       }
+    //       document.getElementById('prev' + this.clsSuffix).onmouseout = function () {
+    //         that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
+    //       }
+    //       document.getElementById('prev' + this.clsSuffix).onclick = function () {
+    //         that.throttle(that.prevSlider, 300, 300);
+    //       }
+
+    //       this.mainDom.addEventListener('touchstart', function (e) {
+    //         clearInterval(that.timer);
+    //         that.startX = e.changedTouches[0].clientX;
+    //         that.startY = e.changedTouches[0].clientY;
+    //       })
+    //       this.mainDom.addEventListener('touchmove', function (e) {
+    //         clearInterval(that.timer);
+    //         that.endX = e.changedTouches[0].clientX;
+    //         that.endY = e.changedTouches[0].clientY;
+    //       })
+    //       this.mainDom.addEventListener('touchend', function () {
+    //         if (!that.mainDom.style.transition) {
+    //           that.mainDom.style.transition = `left ${that.aniTime / 1000}s`
+    //         }
+    //         let angle = that.angle({ X: that.startX, Y: that.startY }, { X: that.endX, Y: that.endY });
+    //         if (Math.abs(angle) > 30) return;
+    //         if (that.endX > that.startX) { // 右滑
+    //           that.prevSlider(that.aniTime);
+    //         } else { // 左滑
+    //           that.nextSlider(that.aniTime);
+    //         }
+    //         that.timer = setInterval(that.nextSlider.bind(that, that.aniTime), that.intervalTime);
+
+    //       })
+    //     },
+    //     // 节流：时间戳版
+    //     throttle (handle, delay, val) {
+    //       var now = Date.now();
+    //       if (now - this.prev >= delay) {
+    //         handle.call(this, val);
+    //         this.prev = Date.now();
+    //       }
+    //     },
+    //     /**
+    //     * 计算滑动角度
+    //     * @param {Object} start 起点坐标
+    //     * @param {Object} end 终点坐标
+    //     */
+    //     angle: function (start, end) {
+    //       var _X = end.X - start.X,
+    //         _Y = end.Y - start.Y
+    //       //返回角度 /Math.atan()返回数字的反正切值
+    //       return 360 * Math.atan(_Y / _X) / (2 * Math.PI);
+    //     }
+    //   }
+
+    //   let imgArr = [{
+    //     url: '#',
+    //     imgPath: ''  },
+    //   {
+    //     url: '#',
+    //     imgPath: ''  },
+    //   {
+    //     url: '#',
+    //     imgPath: '' },
+    //   {
+    //     url: '#',
+    //     imgPath: '' },
+    //   {
+    //     url: '#',
+    //     imgPath: ''  },
+    //   {
+    //     url: '#',
+    //     imgPath:'' },
+    //   {
+    //     url: '#',
+    //     imgPath: ''   },
+    //   {
+    //     url: '#',
+    //     imgPath: '' },
+    //   {
+    //     url: '#',
+    //     imgPath: ''  },
+    //   {
+    //     url: '#',
+    //     imgPath: '' }
+    //   ];
+    //   // let imgArr = ['i.jpg', 'o.jpg', 'q.jpeg'];
+    //   // let imgArr = ['i.jpg', 'o.jpg'];
+    //   // let imgArr = ['i.jpg'];
+    //   new Swiper({
+    //     imgArr: imgArr,
+    //     imgWidth: 320,
+    //     aniTime: 1000,
+    //     intervalTime: 1500,
+    //     scale: 0.8,
+    //     autoplay: false,
+    //     gap: 0,
+    //     clsSuffix: '-card'
+    //   }).init();
+
+
+    //   new Swiper({
+    //     imgArr: imgArr,
+    //     imgWidth: 320,
+    //     aniTime: 1000,
+    //     intervalTime: 1500,
+    //     scale: 0.8,
+    //     autoplay: false,
+    //     gap: -200,
+    //     clsSuffix: '-stack'
+    //   }).init();
+    // }
   },
   mounted () {
-    this.swiperInit();
+    // this.swiperInit();
   },
 
 }

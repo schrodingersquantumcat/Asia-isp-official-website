@@ -25,7 +25,7 @@
 
 /* 二级标题 */
 .title-2 {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   margin: 30px;
   padding-bottom: 10px;
@@ -36,7 +36,7 @@
 .title-3{
   font-size: 18px;
   font-weight: 500;
-  margin-top: 10px;
+  margin: 10px 0;
    color: #0099ff;
 }
 .img-icon {
@@ -65,6 +65,9 @@ p{
 
 /* 在大屏幕上使用大号字体 */
 @media (min-width: 1200px) {
+  p{
+    font-size: 20px;
+  }
   .image-overlay h{
     font-size: 36px;
   }
@@ -99,6 +102,9 @@ p{
 
 /* 在小屏幕上使用小号字体 */
 @media (max-width: 991px) {
+  p{
+    font-size: 18px;
+  }
   .image-overlay h {
     font-size: 28px;
   }
@@ -111,6 +117,9 @@ p{
 }
 
 @media (max-width: 576px) {
+  p{
+    font-size: 16px;
+  }
   .image-overlay h {
     font-size: 26px;
   }
@@ -124,5 +133,4 @@ p{
     padding-top: 10px;
     height: 250px;
   }
-
 }

@@ -21,7 +21,7 @@
           </div>
         </b-col>
         <b-col md="4" class="wximg">
-          <img height="60px" src="../img/weixin.png" alt="" />
+          <img class="wx" height="60px" src="../img/weixin.png" alt="" />
           <img height="120px" src="../img/erwei.jpg" alt="" /></b-col>
       </b-row>
       <!-- 底部导航 -->
@@ -246,5 +246,10 @@ a {
   margin-bottom: 5px;
   text-decoration: underline;
   font-weight: normal;
+}
+.wx{
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 </style>

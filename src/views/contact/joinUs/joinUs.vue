@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- first大图 -->
-    <b-img src="../../../img/dangao.jpg" fluid alt="Responsive image"
+    <b-img src="../../../img/join.jpg" fluid alt="Responsive image"
       style="width: 100%; max-height: 350px;min-height: 200px;"></b-img>
 
     <b-container class="bv-example-row container-style">
@@ -11,39 +11,39 @@
         </b-col>
       </b-row>
       <b-row class="br-2">
-        <b-col><img src="../../../img/dangao.jpg" height="200px" alt="">
+        <b-col md="6"><b-img class="img-lz" src="../../../img/dangao.jpg" fluid alt="Responsive image"></b-img>
         </b-col>
-        <b-col>
+        <b-col md="6">
           <div class="title-2">节日祝福</div>
           <p class="">每月生日礼品、举办生日party。精心准备蛋糕和水果，感受大家庭般温馨</p>
           <p class="">年节礼品，春节、36女神节、端午节、中秋节、元宵节等福利</p>
         </b-col>
       </b-row>
       <b-row class="br-2">
-        <b-col>
+        <b-col md="6">
           <div class="title-2">健康体检</div>
           <p class="">年度体检，常规体检等健康关怀</p>
           <p class="">弹性值得工作时间，加班劳累之余，充分休息</p>
         </b-col>
-        <b-col> <img src="../../../img/tijian.jpg" height="200px" alt="">
+        <b-col md="6"><b-img class="img-lz" src="../../../img/tijian.jpg" fluid alt="Responsive image"></b-img>
         </b-col>
       </b-row>
       <b-row class="br-2">
-        <b-col><img src="../../../img/jiaqi.jpg" height="200px" alt="">
+        <b-col md="6"><b-img class="img-lz" src="../../../img/jiaqi.jpg" fluid alt="Responsive image"></b-img>
         </b-col>
-        <b-col>
+        <b-col md="6">
           <div class="title-2">悠长假期</div>
           <p class="">公司国内外团队旅游，开拓视野、凝心聚力</p>
           <p class="">法定年假，公司年假，带薪病假</p>
         </b-col>
       </b-row>
       <b-row class="br-2">
-        <b-col>
+        <b-col md="6">
           <div class="title-2">聚餐团建</div>
           <p class="">公司定期聚餐，畅所欲言的同时感受不一样的吃喝文化</p>
           <p class="">小活动拓展活动，强健体魄，增强凝聚力，增进感情</p>
         </b-col>
-        <b-col><img src="../../../img/tuanjian.jpg" height="200px" alt="">
+        <b-col md="6"><b-img class="img-lz" src="../../../img/tuanjian.jpg" fluid alt="Responsive image"></b-img>
         </b-col>
       </b-row>
       <b-row>
@@ -92,7 +92,7 @@
 
     </b-container>
 
-    
+
   </div>
 </template>
 
@@ -128,5 +128,4 @@ export default {
   justify-content: space-between;
   margin: 20px 20px;
 }
-
 </style>
